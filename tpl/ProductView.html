@@ -1,0 +1,30 @@
+<div class="topcoat-navigation-bar">
+    <div class="topcoat-navigation-bar__item left quarter">
+        <a class="topcoat-icon-button--quiet back-button" href="#">
+          <span class="topcoat-icon topcoat-icon--back"></span>
+        </a>
+    </div>
+    <div class="topcoat-navigation-bar__item center half">
+        <h1 class="topcoat-navigation-bar__title">Product</h1>
+    </div>
+</div>
+
+<div class='details'>
+    <img style="border-radius:5px" class='product-image' src='<%= image %>'/>
+    <h1><%= title %></h1>
+    <h2>$<%= price %></h2>
+    <h2><%= vendor %></h2>
+    <span class="location"></span>
+    <div class="topcoat-list__container scroller">
+        <ul class="topcoat-list list actions">
+        	<% if (type) { %>
+            <li class="topcoat-list__item"><a href="#products/<%= type %>"><p>View Type</p><p><%= type %></p><div class="action-icon icon-manager"/></a></li>
+            <% } %>
+            <% if (tags) { %>
+            <li class="topcoat-list__item"><a href="#products/<%= tags %>"><p>View Tags</p><p><%= tags %></p><div class="action-icon icon-location"/></a></li>
+            <% } %>
+            <li class="topcoat-list__item"><a href="javascript:void(0);"><p>Compared to: $<%= price %></p><div class="action-icon icon-sms"></div></a></li>
+        </ul>
+    </div>
+</div>
+        
